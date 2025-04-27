@@ -1,0 +1,435 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header Styles */
+header {
+  background-color: #1a3541;
+  color: white;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+.btn {
+  background-color: #00a78e;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #008a74;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #1a3541;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumb a {
+  margin: 0 5px;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 0;
+}
+
+.about-content {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.about-image {
+  flex: 0 0 40%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.about-text {
+  flex: 0 0 60%;
+}
+
+.section-title {
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-text p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.experience-highlight {
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Skills Section */
+.skills {
+  margin-top: 30px;
+}
+
+.skill-item {
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.skill-bar {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background-color: #00a78e;
+}
+
+.web-design {
+  width: 95%;
+}
+.ui-ux {
+  width: 90%;
+}
+.branding {
+  width: 85%;
+}
+.responsive {
+  width: 92%;
+}
+
+/* Office Tour Section */
+.office-tour {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.office-tour h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.office-tour h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.office-tour p {
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.video-thumbnail {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #1a3541;
+  color: white;
+  padding: 60px 0;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-text {
+  flex: 0 0 60%;
+}
+
+.cta-text .subtitle {
+  color: #00a78e;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.cta-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.cta-text p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  flex: 0 0 35%;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 0;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  flex: 0 0 calc(33.333% - 20px);
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-text {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-info h4 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.author-info p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.nav-dot.active {
+  background-color: #00a78e;
+}
+
+/* Footer */
+footer {
+  background-color: #1a3541;
+  color: white;
+  padding: 60px 0 30px;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  color: #00a78e;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #00a78e;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #00a78e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
