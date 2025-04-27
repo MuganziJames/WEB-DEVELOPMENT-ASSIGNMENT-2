@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI Portfolio - Services</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
       /* Reset and Base Styles */
       * {
@@ -39,6 +43,11 @@
         background-color: #1a3541;
         color: white;
         padding: 15px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
       }
 
       .header-container {
@@ -46,8 +55,18 @@
         justify-content: space-between;
         align-items: center;
       }
-
       .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo i {
+        margin-right: 8px;
+      }
+
+      /* .logo {
         display: flex;
         align-items: center;
       }
@@ -56,7 +75,7 @@
         margin-left: 5px;
         font-weight: bold;
         font-size: 1.2rem;
-      }
+      } */
 
       nav ul {
         display: flex;
@@ -289,26 +308,14 @@
     <!-- Header -->
     <header>
       <div class="container header-container">
-        <div class="logo">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" />
-            <text x="8" y="16" fill="white" font-size="12">UI</text>
-          </svg>
-          <span>UI Portfolio</span>
-        </div>
+        <div class="logo"><i class="fas fa-layer-group"></i> UI Portfolio</div>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="./main.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./sevices.html">Services</a></li>
             <li><a href="#">Pages</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </nav>
         <button class="btn">Hire Me</button>
@@ -428,19 +435,28 @@
         <div class="process-steps">
           <div class="process-step">
             <div class="step-image">
-              <img src="/api/placeholder/400/300" alt="Discuss the project" />
+              <img
+                src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog3.jpg"
+                alt="Discuss the project"
+              />
             </div>
             <h3>Discuss the project</h3>
           </div>
           <div class="process-step">
             <div class="step-image">
-              <img src="/api/placeholder/400/300" alt="Develop & elaborate" />
+              <img
+                src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog4.jpg"
+                alt="Develop & elaborate"
+              />
             </div>
             <h3>Develop & elaborate</h3>
           </div>
           <div class="process-step">
             <div class="step-image">
-              <img src="/api/placeholder/400/300" alt="Final agreement" />
+              <img
+                src="https://wp.w3layouts.com/ui-portfolio/wp-content/themes/ui-portfolio/assets/images/blog6.jpg"
+                alt="Final agreement"
+              />
             </div>
             <h3>Final agreement</h3>
           </div>
