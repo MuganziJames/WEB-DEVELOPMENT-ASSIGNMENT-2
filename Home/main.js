@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const el = document.getElementById("hero-title");
-  const words = ["web designer", "web developer", "Photograph"];
+  const words = ["Web Designer", "Web Developer", "Photographer"];
   let w = 0,
     i = 0,
     del = false;
