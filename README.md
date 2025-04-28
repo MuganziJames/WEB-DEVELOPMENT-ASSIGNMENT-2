@@ -95,4 +95,4 @@ Released under the **MIT License** — see [`LICENSE`](LICENSE) for full text.
 
 ---
 
-> Crafted with 💻 & ☕ by **Jude Fabiano Imoli**.
+> Crafted with 💻 & ☕ by **James Muganzi**.
