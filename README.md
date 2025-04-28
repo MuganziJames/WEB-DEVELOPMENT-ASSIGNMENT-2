@@ -71,16 +71,6 @@ $ xdg-open main.html        # Linux
 
 ---
 
-## 📸 Screenshots
-
-| Home                        | About                        | Services                        | Contact                        |
-| --------------------------- | ---------------------------- | ------------------------------- | ------------------------------ |
-| ![](./images/demo-home.png) | ![](./images/demo-about.png) | ![](./images/demo-services.png) | ![](./images/demo-contact.png) |
-
-<sub>Swap these placeholders for real screenshots once you take them.</sub>
-
----
-
 ## ✍️ Customising
 
 - **Colours** — edit `theme.css`; the special Home deep‑teal palette lives under `body.home.dark`.
