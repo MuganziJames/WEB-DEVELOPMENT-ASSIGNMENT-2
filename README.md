@@ -14,6 +14,8 @@ A multi‑page **HTML + CSS + JavaScript** website created for the secon
 
 ---
 
+## [Live Demo](https://web-development-assignment-2-16ya.vercel.app/Home/main.html#)
+
 ## 📂 Project structure
 
 ```text
