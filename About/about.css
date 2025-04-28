@@ -8,8 +8,8 @@
 
 body {
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: var(--text);
+  background-color: var(--surface);
   padding-top: 50px;
 }
 
@@ -31,7 +31,7 @@ a {
 /* Header Styles */
 
 header {
-  background-color: #1a3541;
+  background-color: var(--primary);
   color: white;
   padding: 1rem 5%;
   display: flex;
@@ -71,7 +71,7 @@ nav ul li a {
   transition: color 0.3s;
 }
 nav ul li a:hover {
-  color: #41a58d;
+  color: var(--accent);
 }
 
 .header-buttons {
@@ -80,7 +80,7 @@ nav ul li a:hover {
   margin-left: 2rem;
 }
 .hire-btn {
-  background-color: #41a58d;
+  background-color: var(--accent);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 30px;
@@ -89,7 +89,7 @@ nav ul li a:hover {
   transition: background-color 0.3s;
 }
 .hire-btn:hover {
-  background-color: #348b76;
+  background-color: var(--accent-dark);
 }
 
 .search-icon,
@@ -114,7 +114,7 @@ nav ul li a:hover {
   top: 50px;
   left: 0;
   width: 100%;
-  background-color: #1a3541;
+  background-color: var(--primary);
   padding: 1.5rem;
   z-index: 999;
   text-align: center;
@@ -139,7 +139,7 @@ nav ul li a:hover {
   transition: color 0.3s;
 }
 .mobile-menu a:hover {
-  color: #41a58d;
+  color: var(--accent);
 }
 .mobile-buttons {
   margin-top: 1.5rem;
@@ -159,7 +159,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-color: #1a3541;
+  background-color: var(--primary);
   background-image: linear-gradient(
       rgba(26, 53, 65, 0.9),
       rgba(26, 53, 65, 0.9)
@@ -209,7 +209,7 @@ nav ul li a:hover {
 }
 
 .section-title {
-  color: #666;
+  color: var(--muted);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -219,11 +219,11 @@ nav ul li a:hover {
 .about-text h2 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--text);
 }
 
 .about-text p {
-  color: #666;
+  color: var(--muted);
   margin-bottom: 20px;
 }
 
@@ -244,7 +244,7 @@ nav ul li a:hover {
 .skill-name {
   display: block;
   margin-bottom: 5px;
-  color: #555;
+  color: var(--muted);
 }
 
 .skill-bar {
@@ -256,7 +256,7 @@ nav ul li a:hover {
 
 .skill-level {
   height: 100%;
-  background-color: #00a78e;
+  background-color: var(--success);
 }
 
 .web-design {
@@ -275,7 +275,7 @@ nav ul li a:hover {
 /* Office Tour Section */
 .office-tour {
   padding: 80px 0;
-  background-color: #f9f9f9;
+  background-color: var(--surface);
   text-align: center;
 }
 
@@ -291,7 +291,7 @@ nav ul li a:hover {
 }
 
 .office-tour p {
-  color: #666;
+  color: var(--muted);
   max-width: 800px;
   margin: 0 auto 30px;
 }
@@ -309,7 +309,7 @@ nav ul li a:hover {
 
 /* CTA Section */
 .cta-section {
-  background-color: #1a3541;
+  background-color: var(--primary);
   background-image: linear-gradient(
       rgba(26, 53, 65, 0.9),
       rgba(26, 53, 65, 0.9)
@@ -335,12 +335,12 @@ nav ul li a:hover {
 }
 
 .btn:first-child {
-  background-color: #0e9e7a; /* Green color from the image */
+  background-color: var(--success); /* Green color from the image */
   color: white;
 }
 
 .btn:first-child:hover {
-  background-color: #088e6d;
+  background-color: var(--success);
 }
 
 .btn-outline {
@@ -364,7 +364,7 @@ nav ul li a:hover {
 }
 
 .cta-text .subtitle {
-  color: #00a78e;
+  color: var(--success);
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 1px;
@@ -416,7 +416,7 @@ nav ul li a:hover {
 
 .testimonial-card {
   flex: 0 0 calc(33.333% - 20px);
-  background-color: #f9f9f9;
+  background-color: var(--surface);
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
@@ -424,7 +424,7 @@ nav ul li a:hover {
 
 .testimonial-text {
   margin-bottom: 20px;
-  color: #666;
+  color: var(--muted);
 }
 
 .testimonial-author {
@@ -448,11 +448,11 @@ nav ul li a:hover {
 
 .author-info h4 {
   margin-bottom: 5px;
-  color: #333;
+  color: var(--text);
 }
 
 .author-info p {
-  color: #888;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 
@@ -465,19 +465,19 @@ nav ul li a:hover {
 .nav-dot {
   width: 10px;
   height: 10px;
-  background-color: #ddd;
+  background-color: var(--muted);
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
 }
 
 .nav-dot.active {
-  background-color: #00a78e;
+  background-color: var(--success);
 }
 
 /* Footer */
 footer {
-  background-color: #1a3541;
+  background-color: var(--primary);
   color: white;
   padding: 60px 0 30px;
 }
@@ -505,7 +505,7 @@ footer {
 
 .contact-item i {
   margin-right: 10px;
-  color: #00a78e;
+  color: var(--success);
 }
 
 .social-links {
@@ -527,14 +527,14 @@ footer {
 }
 
 .social-link:hover {
-  background-color: #00a78e;
+  background-color: var(--success);
 }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
   text-align: center;
-  color: #aaa;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 
@@ -545,7 +545,7 @@ footer {
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: #00a78e;
+  background-color: var(--success);
   color: white;
   border-radius: 50%;
   display: flex;

@@ -1,0 +1,29 @@
+:root {
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --text: #333333;
+  --muted: #666666;
+  --border-light: #e9ecef;
+  --field-bg: #f6f6f6;
+  --primary: #1a3541;
+  --accent: #41a58d;
+  --accent-dark: #348b76;
+  --success: #00a78e;
+
+  --hero-overlay: rgba(26, 53, 65, 0.9);
+}
+
+body.dark {
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --text: #e1e1e1;
+  --muted: #c1c1c1;
+  --border-light: #333333;
+  --field-bg: #1d1d1d;
+  --primary: #0a2e29;
+  --accent: #5ee2c0;
+  --accent-dark: color-mix(in srgb, var(--accent) 80%, black 20%);
+  --success: #00d1ae;
+
+  --hero-overlay: rgba(0, 0, 0, 0.7);
+}
