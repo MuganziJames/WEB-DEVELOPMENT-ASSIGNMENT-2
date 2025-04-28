@@ -12,6 +12,7 @@
   </head>
   <body>
     <!-- Header -->
+
     <header>
       <div class="logo"><i class="fab fa-asymmetrik"></i> UI Portfolio</div>
       <nav>
@@ -19,17 +20,35 @@
           <li><a href="../Home/main.html">Home</a></li>
           <li><a href="../About/about.html">About</a></li>
           <li><a href="../Servicess/sevices.html">Services</a></li>
-          <li><a href="#">Pages</a></li>
+          <li><a href="">Pages</a></li>
           <li><a href="../Contact/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-buttons">
         <a href="#" class="hire-btn">Hire Me</a>
         <i class="fas fa-search search-icon"></i>
-        <i class="fas fa-bars menu-icon"></i>
+        <i class="fas fa-moon theme-toggle"></i>
       </div>
+      <i class="fas fa-bars menu-icon"></i>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="../Home/main.html">Home</a></li>
+        <li><a href="../About/about.html">About</a></li>
+        <li><a href="../Servicess/sevices.html">Services</a></li>
+        <li><a href="">Pages</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-buttons">
+        <a href="#" class="hire-btn">Hire Me</a>
+        <div class="mobile-icons">
+          <i class="fas fa-search search-icon"></i>
+          <i class="fas fa-moon theme-toggle"></i>
+        </div>
+      </div>
+    </div>
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-content">
@@ -431,5 +450,46 @@
         <p>© All Rights Reserved | WordPress Theme by UI Portfolio</p>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuIcon = document.querySelector(".menu-icon");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const themeToggles = document.querySelectorAll(".theme-toggle");
+
+        // 1) Hamburger opens/closes the mobile menu
+        menuIcon.addEventListener("click", (e) => {
+          e.stopPropagation();
+          mobileMenu.classList.toggle("active");
+        });
+
+        // 2) If you resize out of mobile view, always close it
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 992) {
+            mobileMenu.classList.remove("active");
+          }
+        });
+
+        // 3) Theme (moon/sun) toggle
+        themeToggles.forEach((toggle) =>
+          toggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            document.body.classList.toggle("dark-mode");
+            toggle.classList.toggle("fa-moon");
+            toggle.classList.toggle("fa-sun");
+          })
+        );
+
+        // 4) Click anywhere else to close the menu
+        document.addEventListener("click", (e) => {
+          if (
+            mobileMenu.classList.contains("active") &&
+            !mobileMenu.contains(e.target) &&
+            !menuIcon.contains(e.target)
+          ) {
+            mobileMenu.classList.remove("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
