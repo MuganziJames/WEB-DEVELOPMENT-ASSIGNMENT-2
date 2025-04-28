@@ -29,22 +29,19 @@ a {
 }
 
 /* Header Styles */
+
 header {
   background-color: #1a3541;
   color: white;
-  padding: 15px 0;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
 }
 
 .logo {
@@ -53,71 +50,111 @@ header {
   display: flex;
   align-items: center;
 }
-
 .logo i {
   margin-right: 8px;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
 nav ul {
   display: flex;
   list-style: none;
 }
-
 nav ul li {
-  margin: 0 15px;
+  margin-left: 1.5rem;
 }
-
 nav ul li a {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
-
 nav ul li a:hover {
   color: #41a58d;
 }
 
-.btn {
-  background-color: #00a78e;
+.header-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+.hire-btn {
+  background-color: #41a58d;
   color: white;
-  padding: 8px 20px;
-  border-radius: 4px;
-  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: background-color 0.3s;
+}
+.hire-btn:hover {
+  background-color: #348b76;
+}
+
+.search-icon,
+.theme-toggle {
+  color: white;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  margin-left: 1rem;
 }
 
-.btn:hover {
-  background-color: #008a74;
-}
-
-/* Hamburger Menu */
-.hamburger-menu {
+.menu-icon {
   display: none;
+  color: white;
+  font-size: 1.2rem;
   cursor: pointer;
-  z-index: 1001;
 }
 
-.bar1,
-.bar2,
-.bar3 {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #1a3541;
+  padding: 1.5rem;
+  z-index: 999;
+  text-align: center;
 }
-
-.hamburger-menu.change .bar1 {
-  transform: rotate(-45deg) translate(-6px, 6px);
+.mobile-menu.active {
+  display: block;
 }
-
-.hamburger-menu.change .bar2 {
-  opacity: 0;
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-.hamburger-menu.change .bar3 {
-  transform: rotate(45deg) translate(-6px, -6px);
+.mobile-menu li {
+  margin-bottom: 1rem;
+}
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+.mobile-menu a:hover {
+  color: #41a58d;
+}
+.mobile-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-buttons .hire-btn {
+  margin-bottom: 1.5rem;
+}
+.mobile-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 /* Hero Section */

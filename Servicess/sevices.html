@@ -11,27 +11,43 @@
     <link rel="stylesheet" href="./services.css" />
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <div class="container header-container">
-        <div class="logo"><i class="fab fa-asymmetrik"></i> UI Portfolio</div>
-        <div class="hamburger-menu">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="../Home/main.html">Home</a></li>
-            <li><a href="../About/about.html">About</a></li>
-            <li><a href="../Servicess/sevices.html">Services</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="../Contact/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <button class="btn">Hire Me</button>
+      <div class="logo"><i class="fab fa-asymmetrik"></i> UI Portfolio</div>
+      <nav>
+        <ul>
+          <li><a href="../Home/main.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="../Servicess/sevices.html">Services</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="../Contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-buttons">
+        <a href="#" class="hire-btn">Hire Me</a>
+        <i class="fas fa-search search-icon"></i>
+        <i class="fas fa-moon theme-toggle"></i>
       </div>
+      <i class="fas fa-bars menu-icon"></i>
     </header>
+
+    <!-- Mobile Menu (also copy/pasted) -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="../Home/main.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="../Servicess/sevices.html">Services</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-buttons">
+        <a href="#" class="hire-btn">Hire Me</a>
+        <div class="mobile-icons">
+          <i class="fas fa-search search-icon"></i>
+          <i class="fas fa-moon theme-toggle"></i>
+        </div>
+      </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
@@ -214,99 +230,5 @@
 
     <!-- Back to top button -->
     <div class="back-to-top">↑</div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const nav = document.querySelector("nav");
-        const hamburgerMenu = document.querySelector(".hamburger-menu");
-        const desktopBtn = document.querySelector(".desktop-btn");
-
-        function setupMobileNav() {
-          if (window.innerWidth <= 992) {
-            const existingBtn = nav.querySelector(".btn");
-            if (existingBtn) {
-              existingBtn.remove();
-            }
-
-            const navBtn = desktopBtn.cloneNode(true);
-            navBtn.classList.remove("desktop-btn");
-            navBtn.classList.add("mobile-btn");
-            nav.appendChild(navBtn);
-          }
-        }
-
-        setupMobileNav();
-
-        hamburgerMenu.addEventListener("click", function () {
-          nav.classList.toggle("active");
-          this.classList.toggle("change");
-        });
-
-        window.addEventListener("resize", setupMobileNav);
-        document.addEventListener("click", function (event) {
-          if (
-            nav.classList.contains("active") &&
-            !nav.contains(event.target) &&
-            !hamburgerMenu.contains(event.target)
-          ) {
-            nav.classList.remove("active");
-            hamburgerMenu.classList.remove("change");
-          }
-        });
-      });
-    </script>
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get elements
-        const headerContainer = document.querySelector(".header-container");
-        const nav = document.querySelector("nav");
-        const hireButton = document.querySelector(".btn");
-        const hamburgerMenu = document.querySelector(".hamburger-menu");
-
-        // Toggle mobile menu
-        hamburgerMenu.addEventListener("click", function () {
-          nav.classList.toggle("active");
-          this.classList.toggle("change");
-        });
-
-        // Move hire button to nav for mobile view
-        const moveHireButton = () => {
-          // First remove any existing cloned button in nav
-          const existingButtonInNav = nav.querySelector(".btn");
-          if (existingButtonInNav) {
-            existingButtonInNav.remove();
-          }
-
-          // Clone the hire button and append it to nav
-          const clonedButton = hireButton.cloneNode(true);
-          clonedButton.classList.add("mobile-btn");
-          nav.appendChild(clonedButton);
-        };
-
-        // Call on page load
-        moveHireButton();
-
-        // Close mobile menu when clicking outside
-        document.addEventListener("click", function (event) {
-          if (
-            nav.classList.contains("active") &&
-            !nav.contains(event.target) &&
-            !hamburgerMenu.contains(event.target)
-          ) {
-            nav.classList.remove("active");
-            hamburgerMenu.classList.remove("change");
-          }
-        });
-
-        // Handle window resize
-        window.addEventListener("resize", function () {
-          if (window.innerWidth > 992) {
-            nav.classList.remove("active");
-            hamburgerMenu.classList.remove("change");
-          } else {
-            moveHireButton();
-          }
-        });
-      });
-    </script> -->
   </body>
 </html>
