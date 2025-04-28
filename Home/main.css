@@ -182,6 +182,21 @@ nav ul li a:hover {
   padding: 0 5%;
   position: relative;
   overflow: hidden;
+  height: 80vh;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  height: 100%;
+}
+.hero-image img {
+  width: auto;
+  height: 90%;
+  object-fit: contain;
+  object-position: bottom right;
 }
 
 .hero-content {
@@ -202,7 +217,7 @@ nav ul li a:hover {
   -webkit-text-stroke: 2px #ffffff;
   color: transparent;
   display: block;
-  min-height: 5.8rem;
+  min-height: 5.5rem;
 }
 
 .hero-description {
@@ -249,18 +264,6 @@ nav ul li a:hover {
 .btn-outline:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px);
-}
-
-.hero-image {
-  flex: 1;
-  text-align: right;
-  z-index: 1;
-}
-
-.hero-image img {
-  max-height: 100vh;
-  max-width: 100%;
-  object-fit: cover;
 }
 
 .hero-bg-elements {
@@ -926,5 +929,28 @@ body.dark-mode .social-link {
   51%,
   100% {
     opacity: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .hero-section {
+    justify-content: space-between;
+    padding: 0 8%;
+    height: 100vh;
+  }
+
+  .hero-content {
+    flex: 0 0 50%;
+    max-width: none;
+  }
+  .hero-image {
+    flex: 0 0 48%;
+    height: 100%;
+  }
+
+  .hero-image img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom right;
   }
 }
