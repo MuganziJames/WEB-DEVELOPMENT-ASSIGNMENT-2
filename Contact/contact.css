@@ -20,6 +20,11 @@ body {
 
 .hero {
   background-color: var(--dark-color);
+  background-image: linear-gradient(
+      rgba(26, 53, 65, 0.9),
+      rgba(26, 53, 65, 0.9)
+    ),
+    url("../images/background.jpg");
   color: #fff;
   padding: 60px 0;
   text-align: center;
@@ -289,4 +294,61 @@ footer {
   text-align: center;
   color: #aaa;
   font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  nav ul,
+  .header-buttons {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact-form .input-group {
+    width: 100%;
+  }
+
+  .map {
+    padding: 0;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 0;
+  }
+  .hero .breadcrumbs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .contact-section {
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 1rem 2%;
+  }
+  .map iframe {
+    height: 250px;
+  }
+  .contact-form .submit-btn {
+    width: 100%;
+  }
 }

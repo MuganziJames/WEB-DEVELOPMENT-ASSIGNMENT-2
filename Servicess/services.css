@@ -167,7 +167,7 @@ nav ul li a:hover {
       rgba(26, 53, 65, 0.9),
       rgba(26, 53, 65, 0.9)
     ),
-    url("/api/placeholder/1200/400");
+    url("../images/background.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -489,5 +489,62 @@ footer {
     height: 35px;
     bottom: 15px;
     right: 15px;
+  }
+}
+@media (max-width: 992px) {
+  nav ul,
+  .header-buttons {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .process-steps {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .process-step {
+    flex: 0 0 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 1rem 2%;
+  }
+
+  .services-section,
+  .process-section {
+    padding: 50px 2%;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
   }
 }

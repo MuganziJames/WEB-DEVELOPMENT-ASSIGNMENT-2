@@ -160,6 +160,11 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
   background-color: #1a3541;
+  background-image: linear-gradient(
+      rgba(26, 53, 65, 0.9),
+      rgba(26, 53, 65, 0.9)
+    ),
+    url("../images/background.jpg");
   color: white;
   padding: 60px 0;
   text-align: center;
@@ -509,4 +514,121 @@ footer {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 992px) {
+  /* Header/nav – from previous */
+  nav ul,
+  .header-buttons {
+    display: none !important;
+  }
+  .menu-icon {
+    display: block !important;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 40px 2%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* About */
+  .about-section .about-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Services – 2 columns */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Skills – stack vertically */
+  .skills-section {
+    flex-direction: column;
+  }
+
+  /* Office Tour thumbnail full-width */
+  .video-thumbnail img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Testimonials – 2 across */
+  .testimonials-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .testimonial-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  /* Portfolio – 2 across */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Clients – wrap logos 2 per row */
+  .clients-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .client-logo {
+    flex: 0 0 45%;
+    margin: 10px 0;
+  }
+}
+
+/* ≤768px (small tablet/large phone) */
+@media (max-width: 768px) {
+  /* Services, Portfolio, Testimonials → 1 column */
+  .services-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonial-card {
+    flex: 0 0 100%;
+  }
+
+  /* Stats – two per row */
+  .stats-section {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .stat-item {
+    flex: 0 0 calc(50% - 1rem);
+    margin-bottom: 1rem;
+  }
+}
+
+/* ≤576px (phone) */
+@media (max-width: 576px) {
+  /* Hero tighter padding & smaller headline */
+  .hero {
+    padding: 20px 2%;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  /* All section padding trimmed */
+  section {
+    padding: 40px 2% !important;
+  }
+
+  /* Stats – one per row */
+  .stat-item {
+    flex: 0 0 100%;
+  }
+
+  /* Footer contact info vertical */
+  .footer-contact,
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
