@@ -769,46 +769,6 @@ footer {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Dark mode */
-body.dark-mode {
-  background-color: #222;
-  color: var(--bg);
-}
-
-body.dark-mode .service-card,
-body.dark-mode .skills-section,
-body.dark-mode .about-section,
-body.dark-mode .person-section,
-body.dark-mode .stats-section,
-body.dark-mode .portfolio-section {
-  background-color: var(--text);
-  color: var(--bg);
-}
-
-body.dark-mode .section-title,
-body.dark-mode .service-title,
-body.dark-mode .skills-content h2,
-body.dark-mode .skill-name,
-body.dark-mode .service-item-content h3,
-body.dark-mode .stat-number,
-body.dark-mode .portfolio-title {
-  color: var(--bg);
-}
-
-body.dark-mode .about-description,
-body.dark-mode .service-desc,
-body.dark-mode .skills-content p,
-body.dark-mode .service-item-content p,
-body.dark-mode .stat-label,
-body.dark-mode .info-value {
-  color: var(--muted);
-}
-
-body.dark-mode .social-link {
-  background-color: #444;
-  color: var(--bg);
-}
-
 /* Responsive Design */
 @media (max-width: 992px) {
   nav ul {

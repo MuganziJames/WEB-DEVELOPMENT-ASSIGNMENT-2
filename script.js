@@ -37,3 +37,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+(() => {
+  const KEY = "ui-theme";
+  const body = document.body;
+  const btn = document.querySelector(".theme-toggle");
+
+  const apply = (mode) => {
+    body.classList.toggle("dark", mode === "dark");
+    btn.classList.toggle("fa-sun", mode === "dark");
+    btn.classList.toggle("fa-moon", mode !== "dark");
+  };
+
+  // 1. initial
+  const saved = localStorage.getItem(KEY) || "light";
+  apply(saved);
+
+  // 2. toggle on click
+  btn?.addEventListener("click", () => {
+    const next = body.classList.contains("dark") ? "light" : "dark";
+    localStorage.setItem(KEY, next);
+    apply(next);
+  });
+})();
