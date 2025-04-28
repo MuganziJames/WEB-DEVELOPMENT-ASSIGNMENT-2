@@ -65,6 +65,15 @@ nav ul {
 nav ul li {
   margin: 0 15px;
 }
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #41a58d;
+}
 
 .btn {
   background-color: #00a78e;

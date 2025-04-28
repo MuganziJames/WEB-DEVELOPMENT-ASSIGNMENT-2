@@ -15,6 +15,11 @@
     <header>
       <div class="container header-container">
         <div class="logo"><i class="fas fa-layer-group"></i> UI Portfolio</div>
+        <div class="hamburger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
         <nav>
           <ul>
             <li><a href="../Home/main.html">Home</a></li>
@@ -23,11 +28,11 @@
             <li><a href="#">Pages</a></li>
             <li><a href="../Contact/contact.html">Contact</a></li>
           </ul>
+          <!-- Hire Me button will be appended here on mobile using JavaScript -->
         </nav>
         <button class="btn">Hire Me</button>
       </div>
     </header>
-
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
@@ -175,17 +180,7 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-logo">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" />
-              <text x="8" y="16" fill="white" font-size="12">UI</text>
-            </svg>
-            <span>UI Portfolio</span>
+            <i class="fab fa-asymmetrik"></i> UI Portfolio
           </div>
           <div class="contact-info">
             <div class="contact-item">
@@ -220,5 +215,100 @@
 
     <!-- Back to top button -->
     <div class="back-to-top">↑</div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.querySelector("nav");
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const desktopBtn = document.querySelector(".desktop-btn");
+
+        function setupMobileNav() {
+          if (window.innerWidth <= 992) {
+            const existingBtn = nav.querySelector(".btn");
+            if (existingBtn) {
+              existingBtn.remove();
+            }
+
+            const navBtn = desktopBtn.cloneNode(true);
+            navBtn.classList.remove("desktop-btn");
+            navBtn.classList.add("mobile-btn");
+            nav.appendChild(navBtn);
+          }
+        }
+
+        setupMobileNav();
+
+        hamburgerMenu.addEventListener("click", function () {
+          nav.classList.toggle("active");
+          this.classList.toggle("change");
+        });
+
+        window.addEventListener("resize", setupMobileNav);
+
+        document.addEventListener("click", function (event) {
+          if (
+            nav.classList.contains("active") &&
+            !nav.contains(event.target) &&
+            !hamburgerMenu.contains(event.target)
+          ) {
+            nav.classList.remove("active");
+            hamburgerMenu.classList.remove("change");
+          }
+        });
+      });
+    </script>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get elements
+        const headerContainer = document.querySelector(".header-container");
+        const nav = document.querySelector("nav");
+        const hireButton = document.querySelector(".btn");
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+        // Toggle mobile menu
+        hamburgerMenu.addEventListener("click", function () {
+          nav.classList.toggle("active");
+          this.classList.toggle("change");
+        });
+
+        // Move hire button to nav for mobile view
+        const moveHireButton = () => {
+          // First remove any existing cloned button in nav
+          const existingButtonInNav = nav.querySelector(".btn");
+          if (existingButtonInNav) {
+            existingButtonInNav.remove();
+          }
+
+          // Clone the hire button and append it to nav
+          const clonedButton = hireButton.cloneNode(true);
+          clonedButton.classList.add("mobile-btn");
+          nav.appendChild(clonedButton);
+        };
+
+        // Call on page load
+        moveHireButton();
+
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            nav.classList.contains("active") &&
+            !nav.contains(event.target) &&
+            !hamburgerMenu.contains(event.target)
+          ) {
+            nav.classList.remove("active");
+            hamburgerMenu.classList.remove("change");
+          }
+        });
+
+        // Handle window resize
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 992) {
+            nav.classList.remove("active");
+            hamburgerMenu.classList.remove("change");
+          } else {
+            moveHireButton();
+          }
+        });
+      });
+    </script> -->
   </body>
 </html>
