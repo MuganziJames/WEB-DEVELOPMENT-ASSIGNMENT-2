@@ -143,3 +143,28 @@ document.addEventListener("DOMContentLoaded", () => {
     update();
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("hero-title");
+  const words = ["web designer", "web developer", "Photograph"];
+  let w = 0,
+    i = 0,
+    del = false;
+
+  const tick = () => {
+    el.textContent = words[w].slice(0, i);
+    if (!del && i === words[w].length) {
+      setTimeout(() => {
+        del = true;
+        tick();
+      }, 1200);
+      return;
+    }
+    if (del && i === 0) {
+      del = false;
+      w = (w + 1) % words.length;
+    }
+    i += del ? -1 : 1;
+    setTimeout(tick, del ? 40 : 100);
+  };
+  tick();
+});
